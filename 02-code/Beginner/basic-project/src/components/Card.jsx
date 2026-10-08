@@ -4,7 +4,7 @@ const Card = ({title,imageUrl}) => {
   return (
     <div className= "bg-amber-50 max-w-100 border-2-violet rounded-xl pt-5 pb-5 pl-5 pr-5 mt-5 mb-5 ml-10"> 
           <div>
-            <img className="max-w-50 max-h-30 rounded-2xl shadow" src={imageUrl}/>
+            <img className="max-w-50 max-h-30 rounded-2xl shad" src={imageUrl}/>
 
           </div>
           <div className='bg-gray-400 max-w-xl   rounded-2xl text-black pt-4 pb-5 mt-2 mb-5

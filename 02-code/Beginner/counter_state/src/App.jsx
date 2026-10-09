@@ -21,7 +21,7 @@ function App() {
         <input type="text" className="input" value= {countSetTo} onChange={(e)=>setcountSetTo(Number(e.target.value))}/>
         <button className='button'  onClick={()=>{setCount(Number(countSetTo)) ;setcountSetTo(0)}}>Set to {countSetTo}</button>
       </div>
-    </>
+    </> 
   )
 }
 

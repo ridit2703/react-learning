@@ -1,4 +1,4 @@
-/* .counter {
+.counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -181,36 +181,4 @@
     right: 0;
     border-right-color: var(--border);
   }
-}
-
-.card{
-  background-color: darkkhaki;
-  display:flex;
-  align-items: center;
-
-  
-
-}
-.button{
-  padding: 5px 5px 5px 5px;
-  margin: 2px;
-  background-color: darkgoldenrod;
-  border-radius: 5px;
-  border: white;
-}
-.input{
-  
- 
- border:1px solid darkgoldenrod;
- padding: 4px;
- border-radius: 4px;
-
-}  */
-.queue-box{
-  display: flex;
-  background-color: red;
-}
-  
-.addto-queue{
-  background-color: antiquewhite;
 }

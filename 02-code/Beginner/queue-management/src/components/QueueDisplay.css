@@ -1,0 +1,186 @@
+
+/* Queue Card */
+.queue-display {
+  width: 100%;
+  max-height: calc(100vh - 125px);
+  overflow-y: auto;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+/* Queue Heading */
+.queue-display h2 {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  color: #0f172a;
+  font-size: 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Empty State */
+.empty-queue {
+  padding: 32px 12px;
+  color: #64748b;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Customer List */
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Customer Item */
+.queue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.queue-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+}
+
+/* Customer Information */
+.customer-info {
+  min-width: 0;
+}
+
+.customer-info h3 {
+  margin-bottom: 6px;
+  color: #1e293b;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.customer-info p {
+  margin-bottom: 10px;
+  color: #64748b;
+  font-size: 14px;
+  text-transform: capitalize;
+  overflow-wrap: anywhere;
+}
+
+/* Status Badge */
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.waiting {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.status.serving {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.status.completed {
+  color: #166534;
+  background: #dcfce7;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.actions button {
+  padding: 9px 12px;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.actions button:hover {
+  transform: translateY(-1px);
+}
+
+.actions button:active {
+  transform: translateY(0);
+}
+
+/* Serve */
+.serve-btn {
+  background: #2563eb;
+}
+
+.serve-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Complete */
+.complete-btn {
+  background: #16a34a;
+}
+
+.complete-btn:hover {
+  background: #15803d;
+}
+
+/* Remove */
+.remove-btn {
+  background: #ef4444;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 760px) {
+  .queue-display {
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .queue-display {
+    padding: 16px;
+  }
+
+  .queue-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .actions button {
+    padding: 9px 11px;
+  }
+}

@@ -1,4 +1,4 @@
-.counter {
+/* .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -180,5 +180,76 @@
   &::after {
     right: 0;
     border-right-color: var(--border);
+  }
+} */
+
+
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Main Application */
+.app {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 32px;
+}
+
+/* Header */
+.app header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.app header h1 {
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+/* Two-column Layout */
+.queue-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.queue-layout > * {
+  min-width: 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 760px) {
+  .app {
+    padding: 18px;
+  }
+
+  .queue-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 12px;
+  }
+
+  .app header {
+    margin-bottom: 20px;
   }
 }

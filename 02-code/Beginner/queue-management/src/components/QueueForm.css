@@ -1,0 +1,75 @@
+
+/* Form Card */
+.queue-box {
+  width: 100%;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+/* Form Layout */
+.queue-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Input and Select */
+.queue-box input,
+.queue-box select {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.queue-box input::placeholder {
+  color: #94a3b8;
+}
+
+.queue-box input:focus,
+.queue-box select:focus {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Add Customer Button */
+.queue-box button {
+  width: 100%;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.queue-box button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.queue-box button:active {
+  transform: translateY(0);
+}
+
+/* Small Screens */
+@media (max-width: 480px) {
+  .queue-box {
+    padding: 18px;
+  }
+}

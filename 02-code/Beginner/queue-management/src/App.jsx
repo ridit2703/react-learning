@@ -3,22 +3,26 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import QueueForm from '../../counter_state/src/components/QueueForm'
+import QueueForm from './components/QueueForm'
+import QueueDisplay from './components/QueueDisplay'
 function App() {
-  const [queue, setQueue] = useState(0)
+  const [queue, setQueue] = useState([])
 
   const addQueue=(customer)=>{
     setQueue([...queue,{...customer,id:Date.now(),status:"waiting"}])
 
   }
 
-  const updateStatus=()=>{
+  const updateStatus=(id,newStatus)=>{
+    setQueue(queue.map(customer=>customer.id===id?{...customer,status:newStatus}:customer
+    ))
 
   }
 
-  const removeQueue=()=>{
+  const removeQueue=(id)=>{
+    setQueue(queue.filter(customer=>customer.id!==id))
 
-  }
+  };
 
 
 
@@ -30,9 +34,15 @@ function App() {
           Queue management Application</h1></header>
 
 
-        <div className="queue-box" >
+        <div className="queue-layout" >
 
          <QueueForm onAdd={addQueue}  />
+        
+        
+          <QueueDisplay 
+          queue={queue}
+          onUpdateStatus={updateStatus}
+          onRemove={removeQueue}/>
         </div>
 
 

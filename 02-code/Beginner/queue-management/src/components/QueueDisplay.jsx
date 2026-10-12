@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+
 import './QueueDisplay.css';
 
 const QueueDisplay = ({ queue, onUpdateStatus,onRemove }) => {

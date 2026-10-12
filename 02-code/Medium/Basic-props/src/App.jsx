@@ -100,7 +100,7 @@ function Navigation() {
 
 function AppContent() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen bg-gray-700 text-black">
       <Navigation />
 
       {/* <main className="mx-auto max-w-7xl px-6 py-12">

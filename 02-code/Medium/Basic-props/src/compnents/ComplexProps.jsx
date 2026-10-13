@@ -127,8 +127,8 @@ function ComplexProps() {
         email: 'amit@gmail.com',
       },
       theme: {
-        mode: 'blue',
-        primaryColor: '#2563EB',
+        mode: 'gray',
+        primaryColor: '#EDE9FE',
         fontSize: '14px',
       },
       actions: {
@@ -142,9 +142,13 @@ function ComplexProps() {
   return (
     <section className="min-h-screen bg-gray-100 px-6 py-10">
       <div className="mx-auto max-w-6xl">
-        <h1 className="mb-2 text-center text-3xl font-bold text-gray-900">
+        {/* <h1 className="mb-2 text-center text-3xl font-bold text-gray-900">
           User Profiles
-        </h1>
+        </h1> */}
+        <h2 className="mb-6 text-2xl font-bold text-gray-800">
+        Complex Props
+      </h2>
+
 
         <p className="mb-8 text-center text-gray-500">
           Learning complex props and nested objects in React

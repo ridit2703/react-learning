@@ -125,9 +125,7 @@ function ChildrenProps() {
       <div className="mx-auto max-w-5xl">
 
         <header className="mb-10 text-center">
-          <span className="mb-3 inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700">
-            React Fundamentals
-          </span>
+         
 
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Children Props

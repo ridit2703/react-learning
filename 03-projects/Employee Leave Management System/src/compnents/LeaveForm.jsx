@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './LeaveForm.css';
 
-const LeaveForm = () => {
+const LeaveForm = ({onAddLeave}) => {
   const [name, setName] = useState('');
   const [leaveType, setLeaveType] = useState('');
   const [startDate, setStartDate] = useState('');
@@ -19,6 +19,14 @@ const LeaveForm = () => {
       endDate,
       reason,
     });
+    onAddLeave({name,leaveType,startDate,endDate,reason});
+    setName("");
+    setLeaveType("");
+    setStartDate("");
+    setEndDate("");
+    setReason("");
+      
+    
   };
 
   return (
@@ -83,7 +91,7 @@ const LeaveForm = () => {
           required
         />
 
-        <button type="submit">Apply Leave</button>
+        <button  type="submit">Apply Leave</button>
       </form>
     </div>
   );

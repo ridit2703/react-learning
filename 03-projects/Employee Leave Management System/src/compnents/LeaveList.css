@@ -1,0 +1,112 @@
+.leave-list {
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  margin: 12px 0 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.leave-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.leave-card {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.leave-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.leave-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.leave-card-header h3 {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge.pending {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.status-badge.approved {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status-badge.rejected {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.leave-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.leave-actions button {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.leave-actions button:hover {
+  opacity: 0.85;
+}
+
+.approve-btn {
+  background: #16a34a;
+}
+
+.reject-btn {
+  background: #dc2626;
+}
+
+.no-results {
+  color: #6b7280;
+  padding: 16px 0;
+}
